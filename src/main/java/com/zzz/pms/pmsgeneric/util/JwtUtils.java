@@ -1,4 +1,4 @@
-package com.zzz.pms.pmsgeneric.utils;
+package com.zzz.pms.pmsgeneric.util;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTCreator;
@@ -17,7 +17,7 @@ public class JwtUtils {
     public static String createToken(int minute, Map<String, String> payload) {
         Algorithm algorithm = Algorithm.HMAC256(SECRET_KEY);
         JWTCreator.Builder builder = JWT.create().withExpiresAt(from(minute));
-        payload.forEach((k, v) -> builder.withClaim(k, v));
+        payload.forEach(builder::withClaim);
         return builder.sign(algorithm);
     }
 
@@ -47,6 +47,5 @@ public class JwtUtils {
         c.add(Calendar.MINUTE, m);
         return c.getTime();
     }
-
 
 }

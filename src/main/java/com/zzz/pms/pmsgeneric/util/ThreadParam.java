@@ -1,6 +1,4 @@
-package com.zzz.pms.pmsgeneric.utils;
-
-import com.zzz.pms.pmsgeneric.utils.Watch;
+package com.zzz.pms.pmsgeneric.util;
 
 public class ThreadParam {
 
