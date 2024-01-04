@@ -8,7 +8,6 @@
         <version>1.0.0</version>
         <relativePath>../pms-parent</relativePath>
     </parent>
-    <groupId>com.zzz.pms</groupId>
     <artifactId>pms-generic</artifactId>
     <version>1.0.0</version>
 
