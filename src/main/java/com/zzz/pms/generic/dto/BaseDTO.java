@@ -1,9 +1,9 @@
-package com.zzz.pms.pmsgeneric.dto;
+package com.zzz.pms.generic.dto;
 
 import lombok.Data;
 
 @Data
-public class BaseDto {
+public class BaseDTO {
     private int pageNo;
     private int pageSize;
     private int total;

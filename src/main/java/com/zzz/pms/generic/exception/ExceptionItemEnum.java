@@ -1,4 +1,4 @@
-package com.zzz.pms.pmsgeneric.exception;
+package com.zzz.pms.generic.exception;
 
 public enum ExceptionItemEnum implements ExceptionItem {
     SUCCESS("0x001", "成功"), ERROR("0x005", "失败"),

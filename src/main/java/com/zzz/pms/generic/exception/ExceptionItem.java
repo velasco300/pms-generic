@@ -1,4 +1,4 @@
-package com.zzz.pms.pmsgeneric.exception;
+package com.zzz.pms.generic.exception;
 
 public interface ExceptionItem {
     public String getCode();

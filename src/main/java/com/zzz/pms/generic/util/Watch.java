@@ -1,4 +1,4 @@
-package com.zzz.pms.pmsgeneric.util;
+package com.zzz.pms.generic.util;
 
 import lombok.Data;
 

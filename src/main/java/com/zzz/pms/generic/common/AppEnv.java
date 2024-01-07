@@ -1,4 +1,4 @@
-package com.zzz.pms.pmsgeneric.common;
+package com.zzz.pms.generic.common;
 
 public class AppEnv {
 

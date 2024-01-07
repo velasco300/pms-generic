@@ -1,10 +1,12 @@
-package com.zzz.pms.pmsgeneric.common;
+package com.zzz.pms.generic.common;
 
-import com.zzz.pms.pmsgeneric.exception.ExceptionItem;
-import com.zzz.pms.pmsgeneric.exception.ExceptionItemEnum;
+import com.zzz.pms.generic.exception.ExceptionItem;
+import com.zzz.pms.generic.exception.ExceptionItemEnum;
 import lombok.Data;
+import lombok.ToString;
 
 @Data
+@ToString
 public class CommonResult<T> {
     private boolean success;
     private String traceId;
@@ -35,6 +37,10 @@ public class CommonResult<T> {
         return failed("", exceptionItem);
     }
 
+    public static CommonResult<String> error(String message) {
+        return new CommonResult<String>(false, "", "", message, "");
+    }
+
     public static CommonResult<String> failed(String traceId, ExceptionItem exceptionItem) {
         return new CommonResult<String>(false, traceId, exceptionItem.getCode(), exceptionItem.getMessage(), "");
     }
@@ -44,8 +50,4 @@ public class CommonResult<T> {
     }
 
 
-    @Override
-    public String toString() {
-        return "CommonResult{" + "success=" + success + ", code='" + code + '\'' + ", message='" + message + '\'' + ", data=" + data + '}';
-    }
 }
