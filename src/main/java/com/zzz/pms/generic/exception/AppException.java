@@ -3,7 +3,6 @@ package com.zzz.pms.generic.exception;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-
 @EqualsAndHashCode(callSuper = true)
 @Data
 public class AppException extends RuntimeException {
@@ -40,6 +39,10 @@ public class AppException extends RuntimeException {
         AppException e = new AppException(exceptionItem.getMessage(), cause);
         e.setExceptionItem(exceptionItem);
         return e;
+    }
+
+    public static void throwException(ExceptionItem exceptionItem) {
+        throw create(exceptionItem);
     }
 
 }
